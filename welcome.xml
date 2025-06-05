@@ -1,1 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
 
+  <!-- 1. Play welcome audio from Filebin -->
+  <Play>https://filebin.net/mnaipmacd6k5jex4/DrHurrssy_Telnyx_.wav</Play>
+
+  <!-- 2. Attempt to connect to Zoiper (SIP) for 20 seconds -->
+  <Dial timeout="20">
+    <Sip>sip:chairmanceo88039@sip.telnyx.com</Sip>
+  </Dial>
+
+  <!-- 3. If no answer, say fallback message -->
+  <Say language="en-US" voice="female">
+    You are now being transferred to the executive mobile number.
+  </Say>
+
+  <!-- 4. Forward the call to your Saudi mobile number with custom caller ID -->
+  <Dial callerId="+19876543210">
+    <Number>+966597100111</Number>
+  </Dial>
+
+</Response>
